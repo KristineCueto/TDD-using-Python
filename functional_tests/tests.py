@@ -53,8 +53,9 @@ class NewVisitorTest(LiveServerTestCase):
 		inputbox.send_keys(Keys.ENTER)
 
 		#The page updates again, and now shows both items on her lists
-		self.check_for_row_in_list_table('1: Buy peacock feathers')
 		self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
+		self.check_for_row_in_list_table('1: Buy peacock feathers')
+		
 
 		#Now a new user, Francis, comes along to the site.
 
@@ -88,7 +89,7 @@ class NewVisitorTest(LiveServerTestCase):
 
 		#Satisfied, they both go back to sleep
 
-		self.fail('Finish the test!')
+		#self.fail('Finish the test!')
 
 		#She visits that URL - her to-do list is still there.
 
